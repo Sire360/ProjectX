@@ -13,9 +13,8 @@ body, html {
     line-height: 1.6;
 }
 
-/* Hero Section */
 .hero-section {
-    background-image: url('../images/simate.jpg'); /* Adjusted path */
+    background-image: url('../images/simate.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -34,8 +33,13 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Faint overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional faint overlay for text contrast */
     z-index: 0;
+}
+
+.overlay-text {
+    position: relative;
+    z-index: 1;
 }
 
 .overlay-text {
