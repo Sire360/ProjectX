@@ -1,27 +1,30 @@
-/* styles.css */
-body, html {
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
+/* General Body Styling */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
 .hero-section {
-    background-image: url('simate.jpg');
+    background-image: url('../images/simate.jpg'); /* Adjusted path */
     background-size: cover;
     background-position: center;
     height: 100vh;
-    position: relative;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-.hero-section .overlay-text {
     position: relative;
-    z-index: 1;
+    color: white;
+    text-align: center;
 }
 
 .hero-section::before {
@@ -35,10 +38,14 @@ body, html {
     z-index: 0;
 }
 
+.overlay-text {
+    position: relative;
+    z-index: 1;
+}
+
 .overlay-text h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin: 0;
 }
 
 .overlay-text p {
@@ -46,11 +53,59 @@ body, html {
     margin-top: 10px;
 }
 
+@media (max-width: 768px) {
+    .overlay-text h1 {
+        font-size: 2.5rem;
+    }
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+/* About and Contact Sections */
+section {
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.about-section, .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about-image img, .contact-image img {
+    max-width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.about-content, .contact-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
+    font-size: 0.9rem;
 }
 
 /* Back-to-Top Button */
@@ -73,70 +128,20 @@ footer {
 .back-to-top:hover {
     background-color: #555;
 }
-/* styles.css */
 
-/* Common Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-.hero-section {
-    height: 400px; /* Adjust height as needed */
-    background: url('images/simate.jpg') no-repeat center center/cover; /* Hero image */
-    position: relative;
-}
-
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-/* About and Contact Section Styles */
-section {
-    padding: 40px 20px;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-.contact-section, .about-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.contact-image img, .about-image img {
-    max-width: 150px; /* Adjust as needed */
-    border-radius: 8px; /* Optional for rounded corners */
-    margin-right: 20px; /* Space between image and text */
-}
-
-.contact-content, .about-content {
-    flex: 1; /* Take remaining space */
-}
-
-ul {
-    list-style: none; 
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0; 
-}
-
-/* Responsive Styles */
+/* Responsive Layout for About and Contact Sections */
 @media (max-width: 768px) {
-    .contact-section, .about-section {
-        flex-direction: column; 
-        align-items: center; 
+    .about-section, .contact-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
-    .contact-image, .about-image {
-        margin-bottom: 20px; 
+    .about-image img, .contact-image img {
+        margin: 0 auto 20px;
+    }
+    
+    .about-content, .contact-content {
+        max-width: 100%;
     }
 }
