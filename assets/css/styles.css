@@ -147,8 +147,8 @@ footer {
 
 /* Additional Styles for the Portfolio Page */
 header {
-    background-color: #007bff; /* Primary color for the header */
-    color: white;
+    background-color: #f8f9fa; /* Neutral color for the header */
+    color: black;
     padding: 60px 0; /* Padding for header section */
 }
 
