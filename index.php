@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+<?php include 'header.html'; ?>
 
 <div class="hero-section d-flex align-items-center justify-content-center">
     <div class="overlay-text text-center">
