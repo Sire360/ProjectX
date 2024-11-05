@@ -1,97 +1,166 @@
-/* General Styles */
-body {
-    font-family: "Lato", sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background for contrast */
+    box-sizing: border-box;
 }
 
-/* Navbar Styles */
-.w3-top {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+/* General Body Styling */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
-.w3-bar {
-    background-color: #000; /* Black background for the navbar */
-}
-
-.w3-bar-item {
-    padding: 16px 20px;
-    color: #fff; /* White text color */
-    text-decoration: none;
-}
-
-.w3-bar-item:hover {
-    background-color: #575757; /* Darker grey on hover */
-}
-
-/* Slideshow Styles */
-.mySlides {
-    display: none;
-}
-
-.w3-display-container {
+.hero-section {
+    background-image: url('../images/simate.jpg'); /* Background image for hero section */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-}
-
-.w3-display-bottommiddle {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Container Styles */
-.w3-content {
-    max-width: 1200px; /* Max width for content */
-    margin: 0 auto; /* Center align */
-}
-
-/* About Section */
-#about {
-    padding: 64px 16px;
-    background-color: #fff; /* White background for sections */
-    border-radius: 8px;
-}
-
-.w3-wide {
-    font-size: 24px; /* Larger font for headers */
-}
-
-.w3-justify {
-    text-align: justify; /* Justify text */
-}
-
-/* Contact Section Styles */
-.w3-container {
-    padding: 64px 16px;
-}
-
-.w3-opacity {
-    opacity: 0.8; /* Slightly transparent for emphasis */
-}
-
-.w3-input {
-    margin-bottom: 16px; /* Space below input fields */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #000; /* Black footer */
-    color: #fff; /* White text in footer */
-    padding: 32px;
+    color: white;
     text-align: center;
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-    .w3-bar-item {
-        padding: 10px; /* Smaller padding for smaller screens */
-    }
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional faint overlay for text contrast */
+    z-index: 0;
+}
 
-    .mySlides img {
-        width: 100%; /* Responsive images */
+.overlay-text {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.overlay-text p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .overlay-text h1 {
+        font-size: 2.5rem;
     }
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+/* About and Contact Sections */
+section {
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.about-section, .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about-image img, .contact-image img {
+    max-width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.about-content, .contact-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* Responsive Layout for About and Contact Sections */
+@media (max-width: 768px) {
+    .about-section, .contact-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .about-image img, .contact-image img {
+        margin: 0 auto 20px;
+    }
+    
+    .about-content, .contact-content {
+        max-width: 100%;
+    }
+}
+
+/* Additional Styles for the Portfolio Page */
+header {
+    background-color: #f8f9fa; /* Neutral color for the header */
+    color: black;
+    padding: 60px 0; /* Padding for header section */
+}
+
+.container {
+    margin-top: 40px; /* Margin for the main content */
+}
+
+h2 {
+    margin-bottom: 20px; /* Bottom margin for h2 elements */
+}
+
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
 }
