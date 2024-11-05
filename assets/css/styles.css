@@ -14,7 +14,7 @@ body, html {
 }
 
 .hero-section {
-    background-image: url('../images/simate.jpg');
+    background-image: url('../images/simate.jpg'); /* Background image for hero section */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -35,11 +35,6 @@ body, html {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Optional faint overlay for text contrast */
     z-index: 0;
-}
-
-.overlay-text {
-    position: relative;
-    z-index: 1;
 }
 
 .overlay-text {
@@ -148,4 +143,24 @@ footer {
     .about-content, .contact-content {
         max-width: 100%;
     }
+}
+
+/* Additional Styles for the Portfolio Page */
+header {
+    background-color: #007bff; /* Primary color for the header */
+    color: white;
+    padding: 60px 0; /* Padding for header section */
+}
+
+.container {
+    margin-top: 40px; /* Margin for the main content */
+}
+
+h2 {
+    margin-bottom: 20px; /* Bottom margin for h2 elements */
+}
+
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
 }
