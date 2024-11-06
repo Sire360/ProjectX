@@ -1,51 +1,143 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simasiku - Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Simate Simasiku</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"> <!-- Ensure style.css is in the same folder as this HTML file -->
+
+  <!-- jQuery and Bootstrap JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="script/script.js"></script> <!-- Ensure script.js is in the same folder as this HTML file -->
+
+  <style>
+    /* Inline CSS for fallback in case external style.css fails to load */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    .jumbotron {
+      background-image: url('images/simate.jpeg'); 
+      background-size: cover;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Placeholder for Header -->
-<div id="header"></div>
-
-<div class="hero-section">
-    <div class="overlay-text">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Explore my projects, skills, and experience</p>
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Simasiku</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Exit</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>Simate Simasiku's Portfolio</h1>      
+    <p>Dedicated to Sustainable Development, Technology, and Financial Consulting</p>
+  </div>
 </div>
 
-<!-- Placeholder for Footer -->
-<div id="footer"></div>
+<!-- About Section -->
+<div class="container-fluid bg-3 text-center" id="about">    
+  <h3>About Me</h3>
+  <p>I am Simate Simasiku, a dedicated Sustainable Development Speaker, Mental Health Advocate, and Financial Consultant. My passion for community growth and sustainability drives my work in advocacy, insurance, and technology.</p>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+  <div class="row">
+    <!-- Education Card -->
+    <div class="col-sm-4">
+      <div class="card education-card">
+        <h4><i class="glyphicon glyphicon-education"></i> My Education</h4>
+        <p>Bachelor’s Degree in Computer Science, Cavendish University Zambia.</p>
+      </div>
+    </div>
+    
+    <!-- Professional Work Card -->
+    <div class="col-sm-4">
+      <div class="card work-card">
+        <h4><i class="glyphicon glyphicon-briefcase"></i> Professional Work</h4>
+        <ul>
+          <li>Financial Consultant at Prudential Life Assurance Zambia, providing tailored insurance and investment solutions.</li>
+          <li>Founder of Smart Ventures, a Fintech company focused on empowering young leaders in technology, graphics, and financial literacy.</li>
+        </ul>
+      </div>
+    </div>
 
-<!-- JavaScript to load header and footer -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Load header
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-        
-        // Load footer
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-    });
-</script>
+    <!-- Voluntary Work Card -->
+    <div class="col-sm-4">
+      <div class="card voluntary-card">
+        <h4><i class="glyphicon glyphicon-heart"></i> Voluntary Work</h4>
+        <ul>
+          <li>Deputy Head of Programs at United Nations Youth Association Zambia.</li>
+          <li>Presenter at Edge TV, under the supervision of Ms. Chiyambi Mwango Tembo.</li>
+          <li>Advocate and speaker on mental health and sustainable development.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Gallery Section -->
+<div class="container-fluid bg-3 text-center" id="gallery">    
+  <h3>Gallery</h3>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Community Outreach</p>
+      <img src="images/community.jpeg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Workshop</p>
+      <img src="images/workshop.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Speaking Event</p>
+      <img src="images/speaking.jpeg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Collaborative Project</p>
+      <img src="images/simate.jpeg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br><br>
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <p>&copy; Simate Simasiku - All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
