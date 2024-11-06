@@ -116,12 +116,14 @@ footer p {
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
+  background-color: #cbebff;
 }
 /* Contact Page */
 .contact-section {
   padding: 60px 20px;
   max-width: 800px;
   margin: auto;
+  
 }
 
 .contact-section h2 {
@@ -161,7 +163,7 @@ html {
 }
 
 .contact-form .submit-btn:hover {
-  background-color: #159a7a;
+  background-color: #cbebff;
 }
 
 .contact-info {
