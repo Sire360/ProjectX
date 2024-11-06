@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- Navigation Bar (can be copied from your main page if you want it here) -->
+<!-- Navigation Bar -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -33,7 +33,7 @@
   <p>I’d love to hear from you! Please fill out the form below to get in touch.</p>
 
   <!-- Contact Form -->
-  <form action="/submit_form" method="post" class="contact-form">
+  <form id="contactForm" action="submit_form.html" method="post" class="contact-form" onsubmit="return handleSubmit()">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required>
 
@@ -64,6 +64,19 @@
 <footer class="container-fluid text-center">
   <p>&copy; Simate Simasiku - All Rights Reserved</p>
 </footer>
+
+<!-- JavaScript -->
+<script>
+  function handleSubmit() {
+    // Prevent the form from submitting and redirect to the confirmation page
+    event.preventDefault();
+
+    // Redirect to submit_form.html (thank you or confirmation page)
+    window.location.href = "submit_form.html"; 
+
+    return false; // Prevent actual form submission
+  }
+</script>
 
 </body>
 </html>
